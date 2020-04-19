@@ -1,0 +1,7 @@
+services:
+    rmcgirr83.posteripinviewtopic.listener:
+        class: rmcgirr83\posteripinviewtopic\event\listener
+        arguments:
+            - @auth
+        tags:
+            - { name: event.listener }
