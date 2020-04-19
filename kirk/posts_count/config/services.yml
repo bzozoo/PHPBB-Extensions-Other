@@ -1,0 +1,13 @@
+services:
+    kirk.posts_count.listener:
+        class: kirk\posts_count\event\listener
+        arguments:
+            - @auth
+            - @config
+            - @template
+            - @dbal.conn
+            - @request
+            - @user
+            - @path_helper
+        tags:
+            - { name: event.listener }
